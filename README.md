@@ -71,4 +71,4 @@ Criar uma classe JUnit 4 como abaixo:
 
 Explore! Existe mais recursos e incentivamos sugestões para o projeto.
 
-Veja recursos na wiki: [Listas](https://github.com/confsoft/FuncaoWeb/wiki/Usando-Lista)
+Veja exemplo de uso com PageObject nos testes: test/*
