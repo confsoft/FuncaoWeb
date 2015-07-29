@@ -8,7 +8,7 @@ public class ConsultaPrecoMedioVeiculos extends ObjetoPaginaBase {
 	 * Navegar para pagina princiapl de consulta de veiculos
 	 */
 	public void navegar(){
-		funcao.navegar("http://www.fipe.org.br/web/index.asp?aspx=/web/indices/veiculos/introducao.aspx");
+		funcao.navegar("http://www.fipe.org.br/pt-br/indices/veiculos/");
 	}
 	/**
 	 * Navegar para a pagina de consulta de carros e utilitarios
@@ -62,6 +62,4 @@ public class ConsultaPrecoMedioVeiculos extends ObjetoPaginaBase {
 	public void fechar() {
 		funcao.fechar();
 	}
-	
 }
-
