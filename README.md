@@ -12,7 +12,7 @@ Recursos
 
 * Centralizar o uso do Selenium em um componente
 * Deixar o código mais legivél escrevendo comandos em português
-* Poupar preocupações técnicas do Selenium
+* Poupar preocupações técnicas do Selenium (de problemas já resolvidos)
 * Usar cookies, javascript, frames, listas, etc. facilmente
 
 Introdução
