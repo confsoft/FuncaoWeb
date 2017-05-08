@@ -62,5 +62,4 @@ public class ConsultaPrecoMedioVeiculos extends ObjetoPaginaBase {
 	public void fechar() {
 		funcao.fechar();
 	}
-	
 }
