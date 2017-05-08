@@ -11,7 +11,6 @@ public class ObjetoPaginaBase {
 	 * Construtor Base para usar fw FuncaoWeb
 	 */
 	public ObjetoPaginaBase(){
-		funcao = new Funcao(new DriverFireFox(), InterProxy.Homolog);
+		funcao = new Funcao(new DriverFireFox());
 	}
-	
 }
