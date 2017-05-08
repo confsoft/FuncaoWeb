@@ -3,7 +3,7 @@ FuncaoWeb
 
 Framework para facilitar testes com selenium WebDriver.
 
-Para quem usa Selenium com Java 2.35 e gostaria de facilitar as coisas ao desenvolver testes.
+Para quem usa Selenium 3.4 com Java 8 e gostaria de facilitar as coisas ao desenvolver testes.
 
 Projeto escrito no eclipse com JUnit 4.
 
