@@ -2,6 +2,7 @@ package br.org.fipe;
 
 import static org.junit.Assert.*;
 
+import br.com.configuracoes.EnumElemento;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,15 +23,13 @@ public class TestePrecoCarros {
 
 	@Test
 	public void test() {
-        consulta.funcao.usarUtilidade().msg("Espera","Verificar onde clicar");
-        consulta.consultaCarrosClickLink();
-        /* mudou a pagina, mas vai ficar aqui para exemplo de page object
 		consulta.selecionaMarca("Ford");
-		consulta.selecionarModelo("Fiesta TITANIUM 1.6 16V Flex Aut.");
-		consulta.selecionarAno("2014 Gasolina");
+		consulta.selecionarModelo("Fiesta TIT./TIT.Plus 1.6 16V Flex Aut.");
+		consulta.selecionarAno("2016 Gasolina");
+		consulta.funcao.clicar(EnumElemento.ID, "buttonPesquisarcarro");
 		System.out.println(consulta.buscaValorResultado());
-		assertTrue("Carro maior que 50k", consulta.buscaValorResultado() > 50000);
-		*/
+		assertTrue("Esperava carro com valor maior que 50k", consulta.buscaValorResultado() > 50000);
+		consulta.funcao.usarUtilidade().msg("Espera","Foi validado o valor do carro se é maior que 50k");
     }
 
 }
