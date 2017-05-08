@@ -79,7 +79,7 @@ public class InstrucaoSql {
 	}
 
 	public List<String> selectVariosDaColuna(String query, String nomeColuna) {
-		List<String> a = new ArrayList<>();
+		List<String> a = new ArrayList();
 		OAD dao = new OAD(servidor, usuario, senha);
 		try {
 			ResultSet rs = dao.executaSQLcomRs(query);

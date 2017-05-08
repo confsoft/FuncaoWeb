@@ -3,9 +3,9 @@ FuncaoWeb
 
 Framework para facilitar testes com selenium WebDriver.
 
-Para quem usa Selenium com Java 2.35 e gostaria de facilitar as coisas ao desenvolver testes.
+Para quem usa Selenium 3.4 com Java 8 e gostaria de facilitar as coisas ao desenvolver testes.
 
-Projeto escrito no eclipse com JUnit 4.
+Projeto atualizado no [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/)
 
 Recursos
 --------
@@ -18,7 +18,9 @@ Recursos
 Introdução
 ----------
 
-Baixe o projeto para o seu workspace.
+Baixe o projeto:
+
+    git clone https://github.com/confsoft/FuncaoWeb.git
 
 Crie um projeto Java, faça referência ao FuncaoWeb.
 
@@ -71,4 +73,4 @@ Criar uma classe JUnit 4 como abaixo:
 
 Explore! Existe mais recursos e incentivamos sugestões para o projeto.
 
-Veja exemplo de uso com PageObject nos testes: test/*
+Veja exemplo de uso com PageObject na pasta: test/*

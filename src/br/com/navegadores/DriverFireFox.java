@@ -6,59 +6,57 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 
 
-
 public class DriverFireFox implements InterNavegadores {
 
-	private WebDriver getFireFoxConfigurado(String proxy) {
-		int porta = 0;
-		FirefoxProfile profile = new FirefoxProfile();
-		profile.setPreference("javascript.enabled", true);
-		
-		//if (habilitarFireBug) { //Criar uma flag para usar essa parte.
-		//	setFireBug(profile);
-		//	System.out.println("true");
-		//}
+    private WebDriver getFireFoxConfigurado(String proxy) {
+        int porta = 0;
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setPreference("javascript.enabled", true);
 
-		if (!(proxy.equals(""))) {
-			
-			String[] caminhoCompleto = proxy.split(", |:| ");
-			proxy = caminhoCompleto[0];
-			porta = Integer.parseInt(caminhoCompleto[1]);
-						
-			profile.setPreference("network.proxy.type", 1);
-			setProxy(profile, proxy, porta);
-			
-			System.out.println(proxy+":"+porta);
+        //if (habilitarFireBug) { //Criar uma flag para usar essa parte.
+        //	setFireBug(profile);
+        //	System.out.println("true");
+        //}
 
-		} else {
-			
-			profile.setPreference("network.proxy.type", 0);
-			System.out.println("proxy:''");
-		}
+        if (!(proxy.equals(""))) {
 
-		return new FirefoxDriver(profile);
-	}
+            String[] caminhoCompleto = proxy.split(", |:| ");
+            proxy = caminhoCompleto[0];
+            porta = Integer.parseInt(caminhoCompleto[1]);
 
-	private void setProxy(FirefoxProfile profile, String proxy, int porta) {
+            profile.setPreference("network.proxy.type", 1);
+            setProxy(profile, proxy, porta);
 
-		profile.setPreference("network.proxy.http", proxy);
-		profile.setPreference("network.proxy.http_port", porta);
+            System.out.println(proxy + ":" + porta);
+        } else {
+            profile.setPreference("network.proxy.type", 0);
+            System.out.println("proxy:''");
+        }
 
-		profile.setPreference("network.proxy.ssl", proxy);
-		profile.setPreference("network.proxy.ssl_port", porta);
+        System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver");
+        return new FirefoxDriver(profile);
+    }
 
-		profile.setPreference("network.proxy.ftp", proxy);
-		profile.setPreference("network.proxy.ftp_port", porta);
+    private void setProxy(FirefoxProfile profile, String proxy, int porta) {
 
-		profile.setPreference("network.proxy.gopher", proxy);
-		profile.setPreference("network.proxy.gopher_port", porta);
+        profile.setPreference("network.proxy.http", proxy);
+        profile.setPreference("network.proxy.http_port", porta);
 
-		profile.setPreference("network.proxy.socks", proxy);
-		profile.setPreference("network.proxy.socks_port", porta);
-		profile.setPreference("network.http.defensive-auth-prompting", false);
-		profile.setPreference("security.ask_for_password", 0);
-		
-	}
+        profile.setPreference("network.proxy.ssl", proxy);
+        profile.setPreference("network.proxy.ssl_port", porta);
+
+        profile.setPreference("network.proxy.ftp", proxy);
+        profile.setPreference("network.proxy.ftp_port", porta);
+
+        profile.setPreference("network.proxy.gopher", proxy);
+        profile.setPreference("network.proxy.gopher_port", porta);
+
+        profile.setPreference("network.proxy.socks", proxy);
+        profile.setPreference("network.proxy.socks_port", porta);
+        profile.setPreference("network.http.defensive-auth-prompting", false);
+        profile.setPreference("security.ask_for_password", 0);
+
+    }
 
 //	private void setFireBug(FirefoxProfile profile) {
 //
@@ -96,12 +94,8 @@ public class DriverFireFox implements InterNavegadores {
 //		profile.setPreference("extensions.firebug.netexport.Automation", true);
 //		profile.setPreference("extensions.firebug.consoleexport.active", true);
 //	}
-	
-	@Override
-	public WebDriver getDriver(String proxy) {
-		return getFireFoxConfigurado(proxy);
-	}
 
-	
-
+    public WebDriver getDriver(String proxy) {
+        return getFireFoxConfigurado(proxy);
+    }
 }
